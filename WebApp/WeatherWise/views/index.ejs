@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.84.0" />
+    <title>WeatherWise</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="bootstrap.css" />
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About</h4>
+              <p class="text-light">
+                At WeatherWise, we're passionate about 
+                bringing you accurate and up-to-date 
+                weather information for cities around 
+                the world. Our mission is to make checking 
+                the weather not just a necessity, but an 
+                enjoyable and seamless experience.
+              </p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Email me</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <div class="weather-icon">&#9925;</div>
+            <strong>WeatherWise</strong>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarHeader"
+            aria-controls="navbarHeader"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="py-1 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">Welcome to WeatherWise</h1>
+            <p class="lead text-muted p-2">
+              <p>🌦️ Discover the Weather in Real-Time!</p>
+              Enter your city below to get the latest temperature 
+              and a detailed weather description
+            </p>
+              <form action="/" method="post">
+                <div class="row p-2">
+                  <div class="mb-3 row">
+                    <label for="cityInput" class="col-lg-3 col-form-label"
+                      >City Name</label
+                    >
+                    <div class="col-lg-9">
+                      <input type="text" class="form-control" name="cityInput" placeholder="Enter City Name"/>
+                    </div>
+                  </div>
+                </div>
+                  <button type="submit" class="btn btn-primary my-2">GO</button>
+                  <button type="reset" class="btn btn-secondary my-2">clear</button>
+              </form>
+            
+            <div class="content text-success mt-2">
+              <img  src=<%= image %> >
+                <p class="fs-5"><%= C1 %></p>
+                <p class="fs-5"><%= C2 %></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="bootstrap.js"></script>
+  </body>
+</html>
